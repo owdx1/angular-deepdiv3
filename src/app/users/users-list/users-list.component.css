@@ -1,0 +1,5 @@
+.is-active {
+    background-color: gray;
+    color: wheat;
+    border-radius: 12px;
+}

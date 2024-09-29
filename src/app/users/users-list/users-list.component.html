@@ -1,0 +1,17 @@
+<div class="w-full h-full">
+    @if (loading()) {
+        <div class="w-full h-full flex items-center justify-center opacity-50">
+            <span class="animate-spin">√</span>
+        </div>
+    } @else {
+        <div class="flex flex-col gap-2 overflow-y-scroll max-h-[600px]">
+            @for (user of users(); track user.id) {
+                <a [routerLink]="['/users', user.id]" routerLinkActive="is-active" class="w-full p-4 border-b flex flex-col">
+                    <span>{{user.username}}</span>
+                    <span class="text-gray-600">{{user.email}}</span>
+                </a>
+            }
+        </div>
+    }
+    
+</div>
